@@ -18,8 +18,8 @@ export default function Home() {
     <div className="min-h-screen bg-pink-50">
       <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-pink-100 shadow-sm">
         <div className="container mx-auto max-w-7xl flex h-20 items-center justify-between px-4">
+          {/* Logo - Agora é um link para a seção de início */}
           <Link href="#inicio" className="flex items-center gap-3">
-            {" "}
             <div className="relative">
               <div className="h-12 w-12 rounded-full bg-gradient-to-br from-pink-400 to-pink-600 flex items-center justify-center shadow-lg">
                 <Heart className="h-4 w-4 text-white fill-white" />
@@ -36,6 +36,7 @@ export default function Home() {
             </div>
           </Link>
 
+          {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
             {[
               { name: "Início", href: "#inicio" },
@@ -55,6 +56,7 @@ export default function Home() {
             ))}
           </nav>
 
+          {/* CTA and Mobile Menu */}
           <div className="flex items-center gap-4">
             {/* CTA Button */}
             <Link href="#contato">
@@ -64,6 +66,7 @@ export default function Home() {
               </Button>
             </Link>
 
+            {/* Mobile Menu Button */}
             <button
               className="lg:hidden p-2 rounded-full bg-pink-50 hover:bg-pink-100 transition-colors"
               onClick={() => {
@@ -93,6 +96,7 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Mobile Menu */}
         <div
           id="mobile-menu"
           className="hidden lg:hidden bg-white border-t border-pink-100 shadow-lg"
@@ -362,7 +366,8 @@ export default function Home() {
                       </svg>
                     ))}
                   </div>
-                  <p className="text-pink-800 mb-4">"{testimonial.text}"</p>
+                  {/* CORREÇÃO DO ERRO AQUI: Removidas as aspas extras */}
+                  <p className="text-pink-800 mb-4">{testimonial.text}</p>
                   <div className="flex items-center gap-3">
                     <div className="h-10 w-10 rounded-full bg-pink-200 flex items-center justify-center">
                       <span className="text-pink-600 font-medium">
